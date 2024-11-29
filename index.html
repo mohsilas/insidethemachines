@@ -1,152 +1,140 @@
 
-        <!DOCTYPE html>
-            <html lang="en" class="light">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Inside The Machines</title>
-                <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-                <style>
-                    :root {
-                        --bg-color: #ffffff;
-                        --text-color: #1a1a1a;
-                        --accent-color: #0066cc;
-                        --heading-font: 'Roboto Serif', serif;
-                        --body-font: 'Lora', serif;
-                    }
+            <!DOCTYPE html>
+                <html lang="en" class="light">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Inside The Machines</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+                    <style>
+                        :root {
+                            --bg-color: #ffffff;
+                            --text-color: #1a1a1a;
+                            --accent-color: #0066cc;
+                            --heading-font: 'Roboto Serif', serif;
+                            --body-font: 'Lora', serif;
+                        }
 
-                    .dark {
-                        --bg-color: #1a1a1a;
-                        --text-color: #ffffff;
-                        --accent-color: #66b3ff;
-                    }
+                        .dark {
+                            --bg-color: #1a1a1a;
+                            --text-color: #ffffff;
+                            --accent-color: #66b3ff;
+                        }
 
-                    body {
-                        font-family: var(--body-font);
-                        line-height: 1.6;
-                        max-width: min(800px, 90vw);
-                        margin: 0 auto;
-                        padding: 1rem;
-                        background: var(--bg-color);
-                        color: var(--text-color);
-                        transition: background-color 0.3s, color 0.3s;
-                        min-height: 100vh;
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    header {
-                        text-align: center;
-                        margin-bottom: 2rem;
-                        font-family: var(--heading-font);
-                    }
-
-                    header h1 {
-                        font-size: clamp(1.5rem, 5vw, 2.5rem);
-                        margin: 0;
-                        font-weight: 700;
-                    }
-
-                    h1, h2, h3 {
-                        color: var(--accent-color);
-                        font-family: var(--heading-font);
-                    }
-
-                    a {
-                        color: var(--accent-color);
-                        text-decoration: none;
-                    }
-
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                    }
-
-                    pre, code {
-                        background: #2d2d2d;
-                        color: #ccc;
-                        padding: 0.2em 0.4em;
-                        border-radius: 3px;
-                        font-size: 0.9em;
-                        overflow-x: auto;
-                    }
-
-                    .theme-toggle {
-                        position: fixed;
-                        top: 1rem;
-                        right: 1rem;
-                        padding: 0.5rem;
-                        background: transparent;
-                        border: none;
-                        font-size: 1.5rem;
-                        cursor: pointer;
-                        z-index: 1000;
-                    }
-
-                    article {
-                        flex: 1;
-                    }
-
-                    footer {
-                        margin-top: 4rem;
-                        padding: 2rem 0;
-                        text-align: center;
-                        font-size: 0.9rem;
-                        opacity: 0.8;
-                        border-top: 1px solid var(--text-color);
-                    }
-
-                    @media (max-width: 768px) {
                         body {
-                            padding: 0.5rem;
+                            font-family: var(--body-font);
+                            line-height: 1.6;
+                            max-width: min(800px, 90vw);
+                            margin: 0 auto;
+                            padding: 1rem;
+                            background: var(--bg-color);
+                            color: var(--text-color);
+                            transition: background-color 0.3s, color 0.3s;
+                            min-height: 100vh;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        header {
+                            text-align: center;
+                            margin-bottom: 2rem;
+                            font-family: var(--heading-font);
+                        }
+
+                        header h1 {
+                            font-size: clamp(1.5rem, 5vw, 2.5rem);
+                            margin: 0;
+                            font-weight: 700;
+                        }
+
+                        h1, h2, h3 {
+                            color: var(--accent-color);
+                            font-family: var(--heading-font);
+                        }
+
+                        a {
+                            color: var(--accent-color);
+                            text-decoration: none;
+                        }
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+
+                        pre, code {
+                            background: #2d2d2d;
+                            color: #ccc;
+                            padding: 0.2em 0.4em;
+                            border-radius: 3px;
+                            font-size: 0.9em;
+                            overflow-x: auto;
                         }
 
                         .theme-toggle {
-                            top: 0.5rem;
-                            right: 0.5rem;
+                            position: fixed;
+                            top: 1rem;
+                            right: 1rem;
+                            padding: 0.5rem;
+                            background: transparent;
+                            border: none;
+                            font-size: 1.5rem;
+                            cursor: pointer;
+                            z-index: 1000;
                         }
-                    }
-                </style>
-            </head>
-            <body>
-                <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
-                <header>
-                    <h1>👾 Inside The Machines 👾</h1>
-                </header>
-                <article>
-                    <h1>The Last Delivery</h1>
-<p>The alarm beeps 6:30 and my mind jolts in confusion. It's my bedroom, the grey-walled white-furnished room. I hit snooze, wouldn't you? And I rolled over to snuggle by my girlfriend. She's warm, asleep, smells of flowers, and for a minute I forget where I am, maybe a cheap heaven.</p>
-<p>The alarm beeps 6:40. The bliss is over. I roll outta bed, every fiber in my body protesting. My girlfriend sleepily protests. I have to get ready for work, our bill is almost due, I reply with a cheek kiss.</p>
-<p>7:00 I left the apartment, feeling choked for lying to her, as always. I don't do constructions anymore, it's been months since the CP53O incident, months with the business going under. And who would keep us, a couple of humans and a fleet of faulty robots? Nobody, My boss just fired us and sold the bots.</p>
-<p>7:30 I received a blacktask while having coffee. A data-packet delivery, requirements: low surveillance score. Good.</p>
-<p>7:55 I arrived at the place, an underground club, a meat and bolts orgy of a club where you can't tell who's human and who's not, but who am I to judge. I'm just here to pick up a package.</p>
-<p>I ruffled across the half-wasted dancing crowd to a table at the far end. As I sat, the client was notified and signaled her arrival.</p>
-<p>"Nice doing business with you" said a tall blonde chick in a velvety green dress.</p>
-<p>"packet?" I asked.</p>
-<p>"Pragmatic, I like him," she spoke to her suited guards studying my every detail, "I am the packet," a symbol glowed in her wrist.</p>
-<p>My jaw tightened. The task was labeled data-packet delivery, not bot escorting. The risk is folds higher. But If I don't pay our bill, Jane's servers would shut down in ten days. My girlfriend, Jane, would factory reset. I should…</p>
-<p>"You're awfully quiet mister…" blondie asked</p>
-<p>I nodded, accepting the deal. A simple delivery. I hope.</p>
-<p>8:10 we moved to a quieter place upstairs, the guards debriefed me. And gave me a gun. And an autolift override key.</p>
-<p>8:30 blondie and I headed for the roof where a double-seated black autolift awaits with spinning blades. All I have to do is accompany the bot downtown. We got inside.</p>
-<p>"Why are you doing this?" she asked, her gray eyes matching the sky, "it's probably money." She answered herself, "but why?"</p>
-<p>I kept staring at the cityscape floating below, a view only the wealthy get. Suddenly my phone ringed a familiar note. "Jane's power status: full." A familiar message.</p>
-<p>"Oh, that's why," She smiled, "you like us girls" she teased. "You know, downtown is 15mins away," she touched her lips.</p>
-<p>"Shut up" I replied, my jaw clenched.</p>
-<p>"Uptight. What's the point?" She protested.</p>
-<p>I stared in silence at my phone. Jane's familiar dashboard, Jane's everything; thoughts, dreams, and the server rent's monthly price increase notice.</p>
-                </article>
-                <footer>
-                    <p>© 2024 Inside The Machines. <a href="mailto:mohsilas@outlook.com">contact writer ✉️</a></p>
-                </footer>
 
-                <script>
-                    const themeToggle = document.querySelector('.theme-toggle');
-                    function toggleTheme() {
-                        document.documentElement.classList.toggle('dark');
-                        themeToggle.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '☀️';
-                    }
-                </script>
-            </body>
-            </html>
-        
+                        article {
+                            flex: 1;
+                        }
+
+                        footer {
+                            margin-top: 4rem;
+                            padding: 2rem 0;
+                            text-align: center;
+                            font-size: 0.9rem;
+                            opacity: 0.8;
+                            border-top: 1px solid var(--text-color);
+                        }
+
+                        @media (max-width: 768px) {
+                            body {
+                                padding: 0.5rem;
+                            }
+
+                            .theme-toggle {
+                                top: 0.5rem;
+                                right: 0.5rem;
+                            }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+                    <header>
+                        <h1>👾 Inside The Machines 👾</h1>
+                    </header>
+                    <article>
+                        <h1>Our Family Business</h1>
+<p>"You know how hair and nails continue to grow even after death?" my cousin asked, staring at the emaciated corpse of a boy. "Well, tumors are like that, only worse," he continued, then unzipped its skin with a scalpel, separated the ribs' cartilage from the breastbone, and pulled open the chest like a rusty drawer. An odor with the intensity of onions thickened the air.</p>
+<p>"We must remove the lungs, liver and intestines, pretty much everything and incinerate them," he spoke clearly without a face mask, a trail of lavender cream painted on the mustache beneath his nose. He extended his elbow-gloved hands with the scalpel through the chest upwards, feeling the far end of the trachea and cut it. He cut the big vessels off the lungs, and then yanked them from the fascia, sprinkling diluted blood over his shoes. He removed the heart and abdominal contents with the swiftness of a true professional. This, after all, is our family business. He asked while yanking the diaphragm, "You ever heard the true history of embalming?"</p>
+<p>It started thousands of years ago sure, but in the US it wasn't until the mid 18th century when a group of med students, grave-robbing a corpse for dissection, came across the unthinkable. And that's when the big lie was spread, that corpses are infested with foulness and disease. That embalming is in the best interest of public health. Yeah right. Embalming merely started to prevent abominations from happening, but as noble as it is, it soon became a business and every body got embalmed, diseased or not.</p>
+<p>"I'm not complaining or anything," he said, "but nothing's like a family trade, you can't easily buy loyalty, or silence."</p>
+<p>My cousin sprayed the corpse's cavity with hydrogen peroxide, hooked its aorta with a formaldehyde-infusing tube and asked me to help him tie the leaking vessels. He then used a suction tube to void the cavity and asked if I wanted to sew it up; I nodded. "You know, I've been to a grave-digging once, that's how they initiate new embalmers," he spoke, "<em>fides est per occisionem</em>."</p>
+<p>The minute they broke the casket, something crawled out. And with axes in hands they witnessed, newcomers must kill one first. And there it was, a decaying corpse with a monstrous belly tumor slathering the ground, or maybe it was a tumor with a corpse on its back. He didn't know. It crawled, slithered, maybe ran with three feet and a hand. It rolled and bounced leaving a trail of foul decaying flesh on its path. It had many eyes popping and diving in its gelatinous surface. It was like a formless clump of evil. Something truly unthinkable.</p>
+<p>My cousin examined the sewing. "You're a natural, ay," he smiled, "can't wait for you to join the family business."</p>
+<p>I smiled back, even more terrified to tell my family that I applied for art school.</p>
+                    </article>
+                    <footer>
+                        <p>© 2024 Inside The Machines. <a href="mailto:mohsilas@outlook.com">contact writer ✉️</a></p>
+                    </footer>
+
+                    <script>
+                        const themeToggle = document.querySelector('.theme-toggle');
+                        function toggleTheme() {
+                            document.documentElement.classList.toggle('dark');
+                            themeToggle.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '☀️';
+                        }
+                    </script>
+                </body>
+                </html>
+            
